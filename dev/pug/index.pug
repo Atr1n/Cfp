@@ -37,6 +37,8 @@ block content
 				button.header__consult-btn
 					|Get a Free Consultation
 
+		
+
 	section.info
 		.container
 			.info__wrap
@@ -46,7 +48,7 @@ block content
 						h1.info__title
 							|Patent
 							span
-								|Check
+								|Check<br>
 							|Of Your Amazon <br> Future Product
 						
 						p.info__text
@@ -56,7 +58,7 @@ block content
 						p.info__subtitle
 							span
 								|Protect yourself
-							|and make sure you are not selling someone's patented invention.
+							|and make sure you are <br> not selling someone's patented invention.
 
 						.info__cards-wrap
 							.info__card
@@ -82,35 +84,55 @@ block content
 
 
 
-				.info__col 
+				.info__col
 					form.info__form-wrap(action="#" method="POST")
-						p.info__title-form
-							|Info
-						.info__email
-							label.info__label(for="email")
-								|Enter your email address
-							input#email.info__field(type="email", name="email" placeholder="team@checkforpatent.com")
+						.info__beginning-pay-wrap
+							p.info__title-form
+								|Info
+							.info__email
+								label.info__label(for="email")
+									|Enter your email address
+								input#email.info__field(type="email", name="email" placeholder="team@checkforpatent.com")
 
-						.info__product
-							p.info__title-product
-								|Product 1
+							.info__product
+								p.info__title-product
+									|Product 1
 
-							label.info__label(for="keyword")
-								|Enter main keyword for the product
-							input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+								label.info__label(for="keyword")
+									|Enter main keyword for the product
+								input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
 
-							label.info__label(for="keyword")
-								|Enter link to the similar product as a reference
-							input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  
+								label.info__label(for="keyword")
+									|Enter link to the similar product as a reference
+								input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  
 
-							button.info__add-product
-								span
-									|Add more products
-								+icon('plus')
+								button.info__add-product
+									span
+										|Add more products
+									+icon('plus')
 
-							p.info__offer-text
-								|We offer discount up to 36% for multiple checks
+								p.info__offer-text
+									|We offer discount up to 36% for multiple checks
 
+						.info__add-products-wrap
+							p.info__title-form
+								|Adding more products
+							span.info__subtitle-form
+								|The more items you check, the better the price.
+
+							.info__products
+								.info__product
+									.info__radio-field
+										input#product5.info__custom-radio(type="radio", name="product" )
+										label(for="product5") 
+							
+					
+																	
+								
+								
+									.info__content-product
+						//- кнопка
+						.info__send-pay
 							button.info__submit-btn(type="submit")
 								|Submit and Pay 24.99 USD 
 

@@ -6,15 +6,6 @@
         justify-content: space-between
 
 
-    &__col+&__col
-        margin: 0 0 0 220px
-
-    
-
-
-
-
-
     &__title
         position: relative
         display: initial;
@@ -87,7 +78,7 @@
         margin: 0 0 0 19px
 
         .info__subtitle-card
-            top: 12px
+            top: 10px
 
         img
             top: 24px
@@ -99,6 +90,9 @@
         img
             top: 7px
             margin-bottom: 16px
+
+        .info__subtitle-card
+            top: 3px
 
     &__title-card
         font-family: 'Gilroy-Medium', sans-serif
@@ -237,5 +231,91 @@
             color: #A7A2CB;
 
 
+    &__beginning-pay-wrap
+        display: none
 
+    &__send-pay
+        position: absolute;
+        width: calc(100% - 80px);
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        margin: auto;
+
+    &__col:last-child
+        position: relative
+
+    &__subtitle-form
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 145%;
+        color: #1c154ecc 
+        margin: 0 0 17px 0
+
+    &__product
+        display: flex
+        align-items: center
+
+    &__radio-field
+        label
+            cursor: pointer
+
+    &__custom-radio 
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      
+    
+    &__custom-radio+label
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+  
+    
+
+    &__custom-radio+label::before 
+        content: '';
+        display: inline-block;
+        width: 26px
+        height: 26px
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #E1E3EE;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+ 
+      
+    
+
+    // &__custom-radio:not(:disabled):not(:checked)+label:hover::before 
+    //     border-color: #b3d7ff;
+      
+    
+
+    // &__custom-radio:not(:disabled):active+label::before 
+    //     background-color: #b3d7ff;
+    //     border-color: #b3d7ff;
+      
+    
+
+    // &__custom-radio:focus+label::before 
+    //     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      
+    
+
+    // &__custom-radio:focus:not(:checked)+label::before 
+    //     border-color: #80bdff;
+      
+    
+
+    &__custom-radio:checked+label::before 
+        // border-color: #0b76ef;
+        // background-color: #0b76ef;
+        // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2323C967'/%3E%3C/svg%3E%0A");      
+   
+    // &__custom-radio:disabled+label::before 
+    //     background-color: #e9ecef;
+      
     
