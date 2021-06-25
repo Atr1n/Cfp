@@ -250,6 +250,7 @@
         font-size: 16px;
         line-height: 145%;
         color: #1c154ecc 
+        display: block
         margin: 0 0 17px 0
 
     &__product
@@ -285,37 +286,50 @@
         background-repeat: no-repeat;
         background-position: center center;
  
-      
-    
 
-    // &__custom-radio:not(:disabled):not(:checked)+label:hover::before 
-    //     border-color: #b3d7ff;
-      
-    
-
-    // &__custom-radio:not(:disabled):active+label::before 
-    //     background-color: #b3d7ff;
-    //     border-color: #b3d7ff;
-      
-    
-
-    // &__custom-radio:focus+label::before 
-    //     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      
-    
-
-    // &__custom-radio:focus:not(:checked)+label::before 
-    //     border-color: #80bdff;
-      
-    
 
     &__custom-radio:checked+label::before 
-        // border-color: #0b76ef;
-        // background-color: #0b76ef;
-        // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2323C967'/%3E%3C/svg%3E%0A");      
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2323C967'/%3E%3C/svg%3E%0A");     
+
+    &__title-choose-product
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 16px;
+        line-height: 20px;  
+        margin: 0 0 11px 0       
    
-    // &__custom-radio:disabled+label::before 
-    //     background-color: #e9ecef;
-      
-    
+    &__content-choose-product
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        color: #A7A2CB;
+  
+    &__product.active-products
+        .info__content-choose-product
+            color: #23C967;
+
+
+        
+
+    &__product
+        position: relative
+        height: 90px
+        padding: 20px 0 18px 67px
+        border: 2px solid #E1E3EE;
+
+    &__product:first-child
+        border-radius: 15px 15px 0px 0px;
+        border-bottom: 0
+
+    &__product:nth-child(2),
+    &__product:nth-child(3),
+    &__product:nth-child(4)
+        border-bottom: 0
+
+    &__product:last-child
+        border-radius: 0px 0px 25px 25px;
+
+    &__radio-field
+        position: absolute
+        left: 20px
+        top: 50%
+        transform: translateY(-50%)
