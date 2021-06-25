@@ -1,20 +1,11 @@
 @import './utils/_normalize'
-@import "utils/vars"
-@import "utils/_fonts"
-@import "utils/_sprite"
+@import './utils/_fonts' 
+@import './modules/header/_header' 
 
+body
+    background: #F4F5FA
 
+.container
+    max-width: 1280px
+    margin: 0 auto
 
-.main-wrapper
-    display: flex
-
-.content-wrapper
-    width: calc(100% - 334px)
-
-@media screen and ( max-width:1330px)
-    .content-wrapper
-        width: calc(100% - 276px)
-    
-@media screen and ( max-width:767px)
-    .content-wrapper
-        width: 100%

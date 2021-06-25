@@ -16,16 +16,9 @@ html(lang="ru-RU")
 		block head
 	
 	body
-		section.main-wrapper
-			include ../modules/sidebar/sidebar
+		block content
 
-			section.content-wrapper
-				include ../modules/header/header
 
-				block content
-
-				include ../modules/footer/footer
-			
 
 		//- script(src="static/js/lib/axios/axios.js")
 		//- script(src="static/js/lib/imask/imask.js")

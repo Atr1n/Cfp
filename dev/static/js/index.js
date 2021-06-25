@@ -1,17 +1,17 @@
 // import {add} from './modules/effects_func/fade'
 // console.log(add(10, 250))
-import {fadeIn, fadeOut} from './modules/effects_func/fade'
+// import {fadeIn, fadeOut} from './modules/effects_func/fade'
 
-// fadeIn()
+// // fadeIn()
 
-let btn = document.querySelector('.btn')
-let box = document.querySelector('.box')
-let close = document.querySelector('.close')
+// let btn = document.querySelector('.btn')
+// let box = document.querySelector('.box')
+// let close = document.querySelector('.close')
 
-btn.addEventListener('click', function(){
-    fadeIn(box)
-})
+// btn.addEventListener('click', function(){
+//     fadeIn(box)
+// })
 
-close.addEventListener('click', function(){
-    fadeOut(box)
-})
+// close.addEventListener('click', function(){
+//     fadeOut(box)
+// })
