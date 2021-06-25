@@ -7,7 +7,7 @@ block head
 	link(rel="stylesheet" type='text/css' href="static/css/home.css")
 
 block content
-	.header
+	header.header
 		.container
 			.header__wrap
 				.header__logo-content
@@ -37,7 +37,7 @@ block content
 				button.header__consult-btn
 					|Get a Free Consultation
 
-	.info
+	section.info
 		.container
 			.info__wrap
 
@@ -85,7 +85,7 @@ block content
 				.info__col 
 					form.info__form-wrap(action="#" method="POST")
 
-	.process
+	section.process
 		.container
 			.process__wrap
 				h2.process__title
@@ -118,13 +118,13 @@ block content
 						p.process__content-col
 							|If you have any questions about <br> our search, we will be happy to <br> answer them
 
-	.features
+	section.features
 		.container
 			.features__wrap
 				h2.features__title
-					|The process we
+					|Core
 					span
-						|follow
+						|features
 			.features__grid-wrap
 				.features__col
 					img.features__pic-col(src="/static/images/content/features-1.png", alt="the image is missing")
@@ -144,3 +144,38 @@ block content
 						|Non-disclosure <br> agreement
 					p.features__content-col 
 						|We value your trust and promise not to share your data or use your requests for commercial purposes. Your requests are stored on a secure server that only our employees have access to.
+
+
+	section.advantages
+		.container
+			.advantages__wrap
+				h2.advantages__title
+					|Why work with
+					span
+						|us
+				.advantages__content
+					p
+						|A carefully thought-out strategy is the key to a successful business start. By launching a new product on Amazon you invest your time and financial resources. It is necessary to consider all possible pitfalls that may arise during the start-up of a new business. 
+					p
+						span
+							|Make sure that your product is not patented
+						|and you do not use hidden trademarks in the description to avoid the unfortunate blocking of the product once it is on the market. Entrust this work to professionals to minimize your risks.
+				img.advantages__pic(src="/static/images/content/circle.png", alt="the image is missing")
+
+
+	footer.footer
+		.container
+			.footer__wrap
+				.footer__col.footer__company
+					p
+						|Check for patent
+					span
+						|West Trade Compass LLC 
+				.footer__col.footer__address
+					p
+						|3422 Old Capitol Trail, Suite 107
+					p
+						|Wilmington, Delaware 19808
+				.footer__col.footer__contact
+					a(href="mailto:team@checkforpatent.com")
+						|team@checkforpatent.com
