@@ -9,12 +9,11 @@
     &__col+&__col
         margin: 0 0 0 220px
 
-    &__form-wrap
-        width: 510px
-        height: 747px
-        background: #FFFFFF;
-        box-shadow: 10px 10px 60px #E2E7FF;
-        border-radius: 0px 50px 50px 50px;
+    
+
+
+
+
 
     &__title
         position: relative
@@ -118,3 +117,125 @@
 
     &__subtitle-card_active
         color: #23C967;
+
+    &__form-wrap
+        padding: 40px
+        width: 510px
+        height: 747px
+        background: #FFFFFF;
+        box-shadow: 10px 10px 60px #E2E7FF;
+        border-radius: 0px 50px 50px 50px;
+
+    &__label
+        display: flex
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 145%;   
+        margin: 0 0 9px 0   
+        color: #1C154E;
+
+    &__field
+        height: 70px;
+        border: 2px solid #E1E3EE;
+        border-radius: 15px;
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 19px; 
+        color: #1C154E;
+        padding: 25px 19px
+        width: 100%
+
+        &::placeholder
+            font-family: 'Gilroy-Medium', sans-serif;
+            font-size: 16px;
+            line-height: 19px; 
+            color: #A7A2CB;
+
+
+        // &::-moz-placeholder      
+
+    &__field+&__label
+        margin-top: 10px
+
+    &__title-form,
+    &__title-product
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 25px;
+        line-height: 134.9%;
+        color: #1C154E;
+        margin: 0 0 12px 0
+
+    &__email
+        display: flex
+        flex-direction: column
+        margin: 0 0 20px 0
+
+    &__add-product
+        position: relative
+        margin: 15px 0 10px 0
+        border: 0
+        border: 2px solid #23C967;
+        border-radius: 15px;
+        background: transparent
+        padding: 25px
+        text-align: left
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 19px; 
+        color: #23C967;
+        width: 100%
+
+        svg
+            position: absolute
+            top: 18px;
+            right: 22px
+            width: 16px;
+            height: 33px;
+
+        &::before
+            content: ''
+            position: absolute
+            height: 71px
+            width: 2px
+            background: #23C967;
+            right: 56px
+            top: 0
+
+    &__offer-text
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 16px;
+        line-height: 19px; 
+        color: #23C967;
+        margin: 0 0 27px 0
+
+    &__submit-btn
+        padding: 20px
+        width: 100%
+        border: 0
+        background: #23C967;
+        border-radius: 15px;    
+        font-family: 'Gilroy-Bold', sans-serif;    
+        font-size: 25px;
+        line-height: 30px;
+        color: #FFFFFF
+        margin: 0 0 9px 0
+        
+    &__text-info
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+            width: 10px
+            height: 12px
+            margin: 0 5px 0 0
+
+        p
+            font-family: 'Gilroy-Medium', sans-serif;
+            font-size: 16px;
+            line-height: 19px;
+            color: #A7A2CB;
+
+
+
+    
