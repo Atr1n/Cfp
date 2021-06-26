@@ -350,3 +350,38 @@
     &__form-wrap.active-beginning-pay
         .info__beginning-pay-wrap
             display: none
+
+    &__delete-prodect-btn
+        position: absolute
+        top: 47px;
+        left: 158px;
+        display: flex
+        border: 0
+        background: transparent
+
+        svg
+            width: 20px
+            height: 20px
+
+    &__product-card+&__product-card
+        margin: 20px 0 0 0
+
+
+    &__product-cards-wrap
+        height: 540px;
+        overflow-y: scroll;
+        margin: 0 -20px 0 0
+        padding: 0 15px 0 0
+
+    &__product-cards-wrap::-webkit-scrollbar
+        width: 6px;
+
+ 
+    &__product-cards-wrap::-webkit-scrollbar-thumb
+        background: #23C967
+        border-radius: 20px;
+
+
+    &__product-cards-wrap::-webkit-scrollbar-track
+        background: #E1E3EE
+        border-radius: 20px;

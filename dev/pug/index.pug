@@ -86,9 +86,11 @@ block content
 				//- info__form-wrap.active-add-products - выбор количества продуктов
 				//- .info__form-wrap.active-beginning-pay - начало оплаты и выбор количества продуктов
 				.info__col
-					.info__form-wrap.active-beginning-pay.active-add-products
-					 
+					.info__form-wrap.active-beginning-pay
+
 						form.info__form(action="#" method="POST")
+
+							//- 1. Изначальное состояния выбора количества продуктов
 							.info__beginning-pay-wrap
 								p.info__title-form
 									|Info
@@ -117,6 +119,7 @@ block content
 									p.info__offer-text
 										|We offer discount up to 36% for multiple checks
 
+							//- 2. Выбор количества продуктов
 							.info__add-products-wrap
 								p.info__title-form
 									|Adding more products
@@ -180,7 +183,85 @@ block content
 											p.info__title-choose-product
 												|1 product for 24.99 usd 
 
-							//- кнопка
+							//- 3. Сами продукты
+							.info__product-cards-wrap
+								.info__product-card
+									button.info__delete-prodect-btn
+										+icon('delete')
+									p.info__title-product
+										|Product 1
+
+									label.info__label(for="keyword")
+										|Enter main keyword for the product
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+
+									label.info__label(for="keyword")
+										|Enter link to the similar product as a reference
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  	
+
+								.info__product-card
+									button.info__delete-prodect-btn
+										+icon('delete')
+									p.info__title-product
+										|Product 2
+
+									label.info__label(for="keyword")
+										|Enter main keyword for the product
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+
+									label.info__label(for="keyword")
+										|Enter link to the similar product as a reference
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  								
+
+								.info__product-card
+									button.info__delete-prodect-btn
+										+icon('delete')
+									p.info__title-product
+										|Product 3
+
+									label.info__label(for="keyword")
+										|Enter main keyword for the product
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+
+									label.info__label(for="keyword")
+										|Enter link to the similar product as a reference
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  	
+
+								.info__product-card
+									button.info__delete-prodect-btn
+										+icon('delete')
+									p.info__title-product
+										|Product 4
+
+									label.info__label(for="keyword")
+										|Enter main keyword for the product
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+
+									label.info__label(for="keyword")
+										|Enter link to the similar product as a reference
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")
+
+								.info__product-card
+									button.info__delete-prodect-btn
+										+icon('delete')
+									p.info__title-product
+										|Product 5
+
+									label.info__label(for="keyword")
+										|Enter main keyword for the product
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+
+									label.info__label(for="keyword")
+										|Enter link to the similar product as a reference
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")
+
+
+							//- 4. Удачная оплата
+
+
+							//- 5. Ошибка оплаты
+
+							//- кнопка оплаты
 							.info__send-pay
 								button.info__submit-btn(type="submit")
 									|Submit and Pay 24.99 USD 
