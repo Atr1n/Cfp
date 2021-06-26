@@ -85,8 +85,10 @@ block content
 
 				//- info__form-wrap.active-add-products - выбор количества продуктов
 				//- .info__form-wrap.active-beginning-pay - начало оплаты и выбор количества продуктов
+				//- .info__form-wrap.active-product-cards - выбранные продукты
+				//- .info__form-wrap.active-payment-successful - оплата успешна
 				.info__col
-					.info__form-wrap.active-beginning-pay
+					.info__form-wrap.active-beginning-pay.active-payment-successful
 
 						form.info__form(action="#" method="POST")
 
@@ -257,7 +259,12 @@ block content
 
 
 							//- 4. Удачная оплата
-
+							.info__payment-successful
+								p.info__title-form
+									|Successfull payment
+								p.info__subtitle-form
+									|Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.			
+								img.info__succes-pic(src="/static/images/content/succes-pic.png", alt="the image is missing")
 
 							//- 5. Ошибка оплаты
 

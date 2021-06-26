@@ -368,10 +368,13 @@
 
 
     &__product-cards-wrap
+        display: none
         height: 540px;
         overflow-y: scroll;
         margin: 0 -20px 0 0
         padding: 0 15px 0 0
+        scrollbar-color: #23C967 #E1E3EE
+        scrollbar-width: thin;
 
     &__product-cards-wrap::-webkit-scrollbar
         width: 6px;
@@ -385,3 +388,27 @@
     &__product-cards-wrap::-webkit-scrollbar-track
         background: #E1E3EE
         border-radius: 20px;
+
+    &__form-wrap.active-product-cards
+        .info__product-cards-wrap
+            display: block
+
+    &__payment-successful
+        display: none
+
+    //- Удачная оплата
+
+    &__form-wrap.active-payment-successful
+        .info__payment-successful
+            display: block     
+
+        .info__text-info
+            display: none
+
+    &__succes-pic
+        position: absolute;
+        top: 47.5%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;       
