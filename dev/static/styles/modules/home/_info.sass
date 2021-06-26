@@ -112,7 +112,7 @@
     &__subtitle-card_active
         color: #23C967;
 
-    &__form-wrap
+    &__form
         padding: 40px
         width: 510px
         height: 747px
@@ -215,9 +215,12 @@
         margin: 0 0 9px 0
         
     &__text-info
+        position: absolute
+        left: 0;
+        right: 0;
         display: flex
         align-items: center
-        justify-content: center
+        justify-content: center;
 
         svg
             width: 10px
@@ -231,15 +234,13 @@
             color: #A7A2CB;
 
 
-    &__beginning-pay-wrap
-        display: none
 
     &__send-pay
         position: absolute;
         width: calc(100% - 80px);
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 67px;
         margin: auto;
 
     &__col:last-child
@@ -333,3 +334,19 @@
         left: 20px
         top: 50%
         transform: translateY(-50%)
+
+    //- выбор количества продуктов
+    &__form-wrap.active-add-products
+        .info__add-products-wrap
+            display: block
+
+        .info__text-info
+            display: none
+
+    &__add-products-wrap
+        display: none
+
+    //- начало оплаты и выбор количества продуктов
+    &__form-wrap.active-beginning-pay
+        .info__beginning-pay-wrap
+            display: none
