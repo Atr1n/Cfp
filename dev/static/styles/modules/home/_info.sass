@@ -412,3 +412,16 @@
         left: 0;
         right: 0;
         margin: 0 auto;       
+
+    &__payment-failed
+        display: none
+
+    &__form-wrap.active-payment-failed
+        .info__payment-failed
+            display: block
+    
+        .info__text-info
+            display: none
+
+        .info__submit-btn
+            background: #EA717F

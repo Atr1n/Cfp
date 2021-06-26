@@ -84,12 +84,17 @@ block content
 
 
 				//- info__form-wrap.active-add-products - выбор количества продуктов
-				//- .info__form-wrap.active-beginning-pay - начало оплаты и выбор количества продуктов
-				//- .info__form-wrap.active-product-cards - выбранные продукты
-				//- .info__form-wrap.active-payment-successful - оплата успешна
-				.info__col
-					.info__form-wrap.active-beginning-pay.active-payment-successful
 
+				//- .info__form-wrap.active-beginning-pay - начало оплаты и выбор количества продуктов
+
+				//- .info__form-wrap.active-product-cards - выбранные продукты
+
+				//- .info__form-wrap.active-payment-successful - оплата успешна
+
+				//- .info__form-wrap.active-payment-failed - ошибка оплаты
+
+				.info__col
+					.info__form-wrap.active-beginning-pay.active-payment-failed
 						form.info__form(action="#" method="POST")
 
 							//- 1. Изначальное состояния выбора количества продуктов
@@ -267,6 +272,12 @@ block content
 								img.info__succes-pic(src="/static/images/content/succes-pic.png", alt="the image is missing")
 
 							//- 5. Ошибка оплаты
+							.info__payment-failed
+								p.info__title-form
+									|Your payment failed
+								p.info__subtitle-form
+									|Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.		
+								img.info__succes-pic(src="/static/images/content/failed-pic.png", alt="the image is missing")
 
 							//- кнопка оплаты
 							.info__send-pay
