@@ -11,7 +11,15 @@ html(lang="ru-RU")
 		meta(name="keywords" content="")
 		link(rel="shortcut icon" href="static/images/favicon.svg" type="image/x-icon")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-		//- link(rel="stylesheet" type='text/css' href="static/css/grid.css")
+
+		//- загрузка шрифтов
+		<link rel="preload" href="/static/fonts/Gilroy/Gilroy-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+		<link rel="preload" href="/static/fonts/Gilroy/Gilroy-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+		<link rel="preload" href="/static/fonts/Gilroy/Gilroy-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+		<link rel="preload" href="/static/fonts/Gilroy/Gilroy-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
 		block head
 	
@@ -19,9 +27,6 @@ html(lang="ru-RU")
 		block content
 
 
-
-		//- script(src="static/js/lib/axios/axios.js")
-		//- script(src="static/js/lib/imask/imask.js")
 		script(src="static/js/bundle.js")
 		block script
 

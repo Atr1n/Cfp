@@ -54,4 +54,4 @@ function getOS() {
     return os;
   }
   
-  alert(getOS());
+  alert(getOS())
