@@ -16,7 +16,7 @@ block content
 					span
 						|Designed for 
 						
-						img(src="/static/images/content/logo-amazon.png", alt="Logo Amazon")
+						img.header__logo(src="/static/images/content/logo-amazon.png", alt="Logo Amazon")
 						
 						|Sellers
 				nav.header__nav-menu
@@ -94,7 +94,7 @@ block content
 				//- .info__form-wrap.active-payment-failed - ошибка оплаты
 
 				.info__col
-					.info__form-wrap.active-beginning-pay.active-payment-failed
+					.info__form-wrap.active-beginning-pay.active-product-cards
 						form.info__form(action="#" method="POST")
 
 							//- 1. Изначальное состояния выбора количества продуктов
@@ -285,7 +285,8 @@ block content
 									|Submit and Pay 24.99 USD 
 
 								.info__text-info
-									+icon('secure')
+									.info__secure-icon
+										+icon('secure')
 									p
 										|Secure payment with Stripe 
 

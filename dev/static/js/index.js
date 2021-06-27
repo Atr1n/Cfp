@@ -1,17 +1,57 @@
-// import {add} from './modules/effects_func/fade'
-// console.log(add(10, 250))
-// import {fadeIn, fadeOut} from './modules/effects_func/fade'
+function getOS() {
+    var userAgent = window.navigator.userAgent,
+        platform = window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
+  
+    //- Mac OS
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac OS';
 
-// // fadeIn()
+      let logo = document.querySelector('.header__logo')
+      let delProductBtn = document.querySelectorAll('.info__delete-prodect-btn')
+      let secureIcon = document.querySelector('.info__secure-icon')
 
-// let btn = document.querySelector('.btn')
-// let box = document.querySelector('.box')
-// let close = document.querySelector('.close')
+      logo.classList.add('logo-Mac')
+      secureIcon.classList.add('icon-secure-Mac')
 
-// btn.addEventListener('click', function(){
-//     fadeIn(box)
-// })
+      delProductBtn.forEach(element => {
+          element.classList.add('delete-product-Mac')
+      });
+      
 
-// close.addEventListener('click', function(){
-//     fadeOut(box)
-// })
+    } 
+
+    //- iOS
+    else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+
+    
+    } 
+    //- Windows
+    else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+
+
+     
+
+    } 
+    
+    //- Android
+    else if (/Android/.test(userAgent)) {
+      os = 'Android';
+
+      
+    } 
+    
+    //- Linux
+    else if (!os && /Linux/.test(platform)) {
+      os = 'Linux';
+    }
+  
+    return os;
+  }
+  
+  alert(getOS());

@@ -222,10 +222,7 @@
         align-items: center
         justify-content: center;
 
-        svg
-            width: 10px
-            height: 12px
-            margin: 0 5px 0 0
+
 
         p
             font-family: 'Gilroy-Medium', sans-serif;
@@ -233,8 +230,15 @@
             line-height: 19px;
             color: #A7A2CB;
 
+    &__secure-icon
+        display: flex
 
+        svg
+            width: 10px
+            height: 12px
+            margin: 0 5px 0 0
 
+            
     &__send-pay
         position: absolute;
         width: calc(100% - 80px);
@@ -353,8 +357,8 @@
 
     &__delete-prodect-btn
         position: absolute
-        top: 47px;
-        left: 158px;
+        top: 8px;
+        left: 120px;
         display: flex
         border: 0
         background: transparent
@@ -366,6 +370,8 @@
     &__product-card+&__product-card
         margin: 20px 0 0 0
 
+    &__product-card
+        position: relative
 
     &__product-cards-wrap
         display: none
