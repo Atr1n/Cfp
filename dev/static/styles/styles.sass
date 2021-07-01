@@ -9,11 +9,32 @@
 @import './modules/home/_active-clases' 
 
 
+
 body
     background: #F4F5FA
+
+body,html
+    overflow-x: hidden
     
 
 .container
     max-width: 1280px
+
+
+.swiper-slide 
+    display: grid
+    justify-content: center
+
+.swiper-pagination
+    bottom: -60px
+    left: 40%
+    @media only screen and (max-width: 550px)
+        left: 35%
+
+.swiper-pagination-bullet 
+    margin-left: 1rem
+
+.swiper-pagination-bullet-active 
+    background: #23C967
 
 

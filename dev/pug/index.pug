@@ -19,24 +19,25 @@ block content
 						img.header__logo(src="/static/images/content/logo-amazon.png", alt="Logo Amazon")
 						
 						|Sellers
-				nav.header__nav-menu
-					ul.header__menu-list
-						li
-							a(href="") 
-								|Main
-						li
-							a(href="") 
-								|Flow
-						li
-							a(href="") 
-								|Benefits
-						li
-							a(href="") 
-								|Contacts
-
-				button.header__consult-btn
-					|Get a Free Consultation
-
+				.overlay
+					nav.overlayMenu
+						ul.header__menu-list
+							li
+								a(href="") 
+									|Main
+							li
+								a(href="") 
+									|Flow
+							li
+								a(href="") 
+									|Benefits
+							li
+								a(href="") 
+									|Contacts
+							li
+								button.header__consult-btn
+									|Get a Free Consultation
+		.navBurger(id="navToggle")
 		
 
 	section.info
@@ -52,35 +53,37 @@ block content
 							|Of Your Amazon <br> Future Product
 						
 						p.info__text
-							|Get a detailed patent and trademark check of a product <br> that you are going to sell on Amazon by an experienced <br> patent consultant.
+							|Get a detailed patent and trademark check of <br> a product that you are going to sell on Amazon <br> by an experienced patent consultant.
 
 					.info__present-content
 						p.info__subtitle
-							span
-								|Protect yourself
-							|and make sure you are <br> not selling someone's patented invention.
-
+							|Protect yourself and make sure you are not selling someone's
+							span 
+								|patented invention.	
 						.info__cards-wrap
 							.info__card
 								p.info__title-card
 									|Sylicon wine cap
 								img.info__pic-card(src="/static/images/content/card-1.png", alt="the image is missing")
-								p.info__subtitle-card
-									|Active patent <br> High  risk to sell
+								.info__card-footer 
+									p.info__subtitle-card
+										|Active patent <br> High  risk to sell
 
 							.info__card
 								p.info__title-card
 									|Shower head <br> with mineral filler
 								img.info__pic-card(src="/static/images/content/card-2.png", alt="the image is missing")
-								p.info__subtitle-card.info__subtitle-card_active
-									|Expired patent <br> Totally safe to sell
+								.info__card-footer-2 
+									p.info__subtitle-card
+										|Active patent <br> High  risk to sell
 
 							.info__card
 								p.info__title-card
 									|Full Face <br> Snorkel Mask
 								img.info__pic-card(src="/static/images/content/card-3.png", alt="the image is missing")
-								p.info__subtitle-card
-									|Active patent <br> High  risk to sell
+								.info__card-footer 
+									p.info__subtitle-card
+										|Active patent <br> High  risk to sell
 
 
 				//- info__form-wrap.active-add-products - выбор количества продуктов
@@ -97,7 +100,7 @@ block content
 					.info__form-wrap
 						form.info__form(action="#" method="POST")
 
-							//- 1. Изначальное состояния выбора количества продуктов
+							//- 1. Изначальное состояние выбора количества продуктов
 							.info__beginning-pay-wrap
 								p.info__title-form
 									|Info
@@ -126,6 +129,19 @@ block content
 									p.info__offer-text
 										|We offer discount up to 36% for multiple checks
 
+								//- кнопка оплаты
+								.info__send-pay
+								button.info__submit-btn(type="submit")
+									|Submit and Pay 
+									span(id="span")
+										|24.99 USD 
+
+								.info__text-info
+									.info__secure-icon
+										+icon('secure')
+									p
+										|Secure payment with Stripe 
+
 							//- 2. Выбор количества продуктов
 							.info__add-products-wrap
 								p.info__title-form
@@ -138,7 +154,7 @@ block content
 									//- .info__product.active-products - выбранный вариант
 									.info__product.active-products
 										.info__radio-field
-											input#product5.info__custom-radio(type="radio", name="product" checked)
+											input#product5.info__custom-radio(type="radio", name="product"  value="product-5" checked)
 											label(for="product5") 
 																
 										.info__text-product
@@ -149,7 +165,7 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product4.info__custom-radio(type="radio", name="product")
+											input#product4.info__custom-radio(type="radio", name="product" value="product-4" )
 											label(for="product4") 
 																
 										.info__text-product
@@ -161,7 +177,7 @@ block content
 					
 									.info__product
 										.info__radio-field
-											input#product3.info__custom-radio(type="radio", name="product")
+											input#product3.info__custom-radio(type="radio", name="product" value="product-3" )
 											label(for="product3") 
 																
 										.info__text-product
@@ -172,7 +188,7 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product2.info__custom-radio(type="radio", name="product")
+											input#product2.info__custom-radio(type="radio", name="product" value="product-2" )
 											label(for="product2") 
 																
 										.info__text-product
@@ -183,12 +199,17 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product1.info__custom-radio(type="radio", name="product")
+											input#product1.info__custom-radio(type="radio", name="product" value="product-1" )
 											label(for="product1") 
 																
 										.info__text-product
 											p.info__title-choose-product
 												|1 product for 24.99 usd 
+
+									//- кнопка оплаты
+								.info__send-pay
+										button.info__submit-btn(type="submit")
+											|Continue
 
 							//- 3. Сами продукты
 							.info__product-cards-wrap
@@ -262,6 +283,10 @@ block content
 										|Enter link to the similar product as a reference
 									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")
 
+								//- кнопка оплаты
+								.info__send-pay
+										button.info__submit-btn(type="submit")
+											|Continue
 
 							//- 4. Удачная оплата
 							.info__payment-successful
@@ -279,16 +304,7 @@ block content
 									|Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.		
 								img.info__succes-pic(src="/static/images/content/failed-pic.png", alt="the image is missing")
 
-							//- кнопка оплаты
-							.info__send-pay
-								button.info__submit-btn(type="submit")
-									|Submit and Pay 24.99 USD 
-
-								.info__text-info
-									.info__secure-icon
-										+icon('secure')
-									p
-										|Secure payment with Stripe 
+							
 
 
 	section.process
@@ -298,32 +314,36 @@ block content
 					|The process we
 					span
 						|follow
-				.process__grid-wrap
-					.process__col
-						.process__dot
-						p.process__title-col
-							|Fill in the form
-						p.process__content-col
-							|Fill in the form and enter the <br> product names you want to <br> check
-					.process__col
-						.process__dot
-						p.process__title-col
-							|Research 
-						p.process__content-col
-							|We conduct a wide and detailed <br> search and analyze similar <br> patents 
-					.process__col
-						.process__dot
-						p.process__title-col
-							|Send result
-						p.process__content-col
-							|We will process your request <br> and send you a reply withinone <br> working day
-					.process__col
-						.process__dot
-						p.process__title-col
-							|Answer questions
-						p.process__content-col
-							|If you have any questions about <br> our search, we will be happy to <br> answer them
+				.swiper-container 
+					.process__grid-wrap.swiper-wrapper
+						.process__col.swiper-slide
+							.process__dot
+							p.process__title-col
+								|Fill in the form
+							p.process__content-col
+								|Fill in the form and enter the <br> product names you want to  check <br> for patent existence
+						.process__col.swiper-slide
+							.process__dot
+							p.process__title-col
+								|Research 
+							p.process__content-col
+								|We conduct a wide and detailed <br> patent search and analyze <br> similar patents 
+						.process__col.swiper-slide
+							.process__dot
+							p.process__title-col
+								|Send result
+							p.process__content-col
+								|We will process your request <br> and send you a reply within <br> one working day
+						.process__col.swiper-slide
+							.process__dot
+							p.process__title-col
+								|Answer questions
+							p.process__content-col
+								|If you have any questions about <br> our patent search, we will be <br> happy to answer them
+				.swiper-pagination
+								
 
+				
 	section.features
 		.container
 			.features__wrap

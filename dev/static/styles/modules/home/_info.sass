@@ -1,10 +1,16 @@
 .info
-    margin: 75px 0 240px 0
+    margin: 80px 0 200px 0
+    @media only screen and (max-width: 1024px)
+        margin: 80px 0 100px 0
+    @media only screen and (max-width: 550px)
+        margin: 80px 0 60px 0
 
     &__wrap
         display: flex
         justify-content: space-between
-
+        @media only screen and (max-width: 768px)
+            display: grid
+            justify-content: center
 
     &__title
         position: relative
@@ -13,6 +19,9 @@
         font-size: 54px;
         line-height: 65px;
         color: #1C154E;
+        @media only screen and (max-width: 768px)
+            font-size: 34px
+            line-height: 36px
 
         &::after
             content: ''
@@ -37,13 +46,13 @@
         margin: 24px 0 0 0
 
     &__present-content+&__present-content
-        margin: 129px 0 0 0
+        margin: 55px 0 0 0
 
     &__subtitle
         font-family: 'Gilroy-SemiBold', sans-serif
-        font-size: 25px;
+        font-size: 14px;
         line-height: 134.9%;
-        margin: 0 0 40px 0
+        margin: 0 0 15px 0
 
         span
             color: #23C967
@@ -51,48 +60,65 @@
 
     &__cards-wrap
         display: flex
+        flex-wrap: wrap
         align-items: center
 
     &__card
+        position: relative
         display: grid
         width: 170px
         height: 230px
         padding: 14px 27px
-        background: #FFFFFF;
-        box-shadow: 10px 10px 15px #E7EAFA;
-        border-radius: 0px 25px 25px 25px;
+        background: #FFFFFF
+        box-shadow: 10px 10px 15px #E7EAFA
+        border-radius: 0px 25px 25px 25px
+        @media only screen and (max-width: 550px)
+            width: 100%
 
+        &-footer
+            position: absolute
+            bottom: 0px
+            width: 100%
+            padding: 10px
+            background: #98A3D9
+            border-radius: 0px 25px 25px 0px
+
+        &-footer-2
+            position: absolute
+            bottom: 0px
+            width: 100%
+            padding: 10px
+            background: #23C967
+            border-radius: 0px 25px 25px 0px
+            
         img
-            position: relative;
+            position: relative
             margin-left: auto
             margin-right: auto
 
-    &__card:first-child
-        .info__subtitle-card
-            top: 15px
-            
-        img
-            top: 29px
+    &__card:not(:first-child)
+        margin-left: 25px
+        @media only screen and (max-width: 1024px)
+            margin-left: 10px
+        @media only screen and (max-width: 550px)
+            margin-top: 1rem
+            margin-left: 0
+        
+
 
     &__card:nth-child(2)
-        margin: 0 0 0 19px
-
-        .info__subtitle-card
-            top: 10px
-
         img
-            top: 24px
-            margin-bottom: 15px
+            margin-bottom: 35px
         
     &__card:last-child
-        margin: 0 0 0 22px
-
+        @media only screen and (max-width: 550px)
+            margin-top: 1rem
+            margin-left: 0
+        @media only screen and (max-width: 375px)
+            margin-top: 5px
         img
-            top: 7px
-            margin-bottom: 16px
+            margin-bottom: 45px
 
-        .info__subtitle-card
-            top: 3px
 
     &__title-card
         font-family: 'Gilroy-Medium', sans-serif
@@ -106,19 +132,20 @@
         font-family: 'Gilroy-SemiBold', sans-serif
         font-size: 13px;
         line-height: 130%;
-        color: #E37488;
+        color: #fff;
         text-align: center
 
-    &__subtitle-card_active
-        color: #23C967;
-
     &__form
-        padding: 40px
-        width: 510px
-        height: 747px
+        width: 440px
+        padding: 35px
         background: #FFFFFF;
         box-shadow: 10px 10px 60px #E2E7FF;
         border-radius: 0px 50px 50px 50px;
+        @media only screen and (max-width: 768px)
+                width: 100%
+        &-wrap
+            @media only screen and (max-width: 768px)
+                padding-top: 2rem
 
     &__label
         display: flex
@@ -129,32 +156,33 @@
         color: #1C154E;
 
     &__field
-        height: 70px;
-        border: 2px solid #E1E3EE;
-        border-radius: 15px;
+        height: 0px
+        border: none
+        border-bottom: 1.5px solid #E1E3EE;
         font-family: 'Gilroy-Medium', sans-serif;
         font-size: 16px;
-        line-height: 19px; 
+        line-height: 19px;
         color: #1C154E;
-        padding: 25px 19px
+        padding: 12px 0px
+        padding-bottom: 1.2rem
         width: 100%
 
         &::placeholder
             font-family: 'Gilroy-Medium', sans-serif;
             font-size: 16px;
             line-height: 19px; 
-            color: #A7A2CB;
+            color: #D0D3E2;
 
 
-        // &::-moz-placeholder      
+        // &::-moz-placeholder   
 
     &__field+&__label
-        margin-top: 10px
+        margin-top: 20px
 
     &__title-form,
     &__title-product
         font-family: 'Gilroy-Bold', sans-serif;
-        font-size: 25px;
+        font-size: 18px;
         line-height: 134.9%;
         color: #1C154E;
         margin: 0 0 12px 0
@@ -166,33 +194,35 @@
 
     &__add-product
         position: relative
-        margin: 15px 0 10px 0
+        width: 100%
+        padding: 1rem 1.2rem
+        margin: 25px 0 15px 0
         border: 0
         border: 2px solid #23C967;
-        border-radius: 15px;
-        background: transparent
-        padding: 25px
-        text-align: left
-        font-family: 'Gilroy-Medium', sans-serif;
         font-size: 16px;
         line-height: 19px; 
+        border-radius: 15px;
+        background: transparent
+        font-family: 'Gilroy-Medium', sans-serif;
+        text-align: left
         color: #23C967;
-        width: 100%
+        @media only screen and (max-width: 320px)
+            font-size: 14px
 
         svg
             position: absolute
-            top: 18px;
-            right: 22px
+            top: 10px;
+            right: 20px
             width: 16px;
             height: 33px;
 
         &::before
             content: ''
             position: absolute
-            height: 71px
+            height: 51px
             width: 2px
             background: #23C967;
-            right: 56px
+            right: 53px
             top: 0
 
     &__offer-text
@@ -200,29 +230,28 @@
         font-size: 16px;
         line-height: 19px; 
         color: #23C967;
-        margin: 0 0 27px 0
 
     &__submit-btn
-        padding: 20px
         width: 100%
+        padding: 1rem 1.2rem
+        margin: 27px 0 25px 0
         border: 0
         background: #23C967;
         border-radius: 15px;    
-        font-family: 'Gilroy-Bold', sans-serif;    
-        font-size: 25px;
-        line-height: 30px;
+        font-family: 'Gilroy-Bold', sans-serif; 
+        font-weight: bold   
+        font-size: 18px;
+        line-height: 22px;
         color: #FFFFFF
-        margin: 0 0 9px 0
+        @media only screen and (max-width: 320px)
+            font-size: 14px
         
     &__text-info
-        position: absolute
         left: 0;
         right: 0;
         display: flex
         align-items: center
         justify-content: center;
-
-
 
         p
             font-family: 'Gilroy-Medium', sans-serif;
@@ -240,12 +269,6 @@
 
             
     &__send-pay
-        position: absolute;
-        width: calc(100% - 80px);
-        left: 0;
-        right: 0;
-        bottom: 67px;
-        margin: auto;
 
     &__col:last-child
         position: relative
@@ -304,7 +327,7 @@
    
     &__content-choose-product
         font-family: 'Gilroy-Medium', sans-serif;
-        font-size: 16px;
+        font-size: 13px;
         line-height: 19px;
         color: #A7A2CB;
   
@@ -312,12 +335,10 @@
         .info__content-choose-product
             color: #23C967;
 
-
         
-
     &__product
         position: relative
-        height: 90px
+        height: 70px
         padding: 20px 0 18px 67px
         border: 2px solid #E1E3EE;
 

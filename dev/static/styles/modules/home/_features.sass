@@ -1,5 +1,9 @@
 .features
     margin: 0 0 243px 0
+    @media only screen and (max-width: 1024px)
+        margin: 145px 0 100px 0
+    @media only screen and (max-width: 550px)
+        margin: 0 0 0 0
 
     &__title
         font-family: 'Gilroy-Bold', sans-serif
@@ -8,16 +12,19 @@
         color: #1C154E;     
         text-align: center   
         margin: 0 0 70px 0
-
+        @media only screen and (max-width: 550px)
+            margin: 0 0 20px 0
+            font-size: 26px
+            text-align: left
         span
             color: #23C967;
             margin: 0 0 0 10px
 
     &__grid-wrap
         display: flex
-        // justify-content: space-between
-        // display: grid
-        // grid-template-columns: repeat(3, 1fr )
+        @media only screen and (max-width: 768px)
+            justify-content: center
+            flex-wrap: wrap
 
     &__col
         background: #FFFFFF;
@@ -26,12 +33,22 @@
         width: 430px
         height: 400px
         padding: 33px 50px 0 50px
+        @media only screen and (max-width: 1024px)
+            height: inherit
+            padding: 33px 50px 2rem 50px
+            margin-bottom: 1rem
+        @media only screen and (max-width: 550px)
+            width: 100%
 
     &__col+&__col
         margin: 0 0 0 40px
+        @media only screen and (max-width: 768px)
+            margin: 0 0 1rem 0
 
     &__pic-col
-        margin: 0 0 51px 0
+        width: 45px
+        height: 50px
+        margin: 1rem 0 2rem 0
 
     &__title-col
         font-family: 'Gilroy-Bold', sans-serif
@@ -39,9 +56,13 @@
         line-height: 134.9%;
         color: #1C154E;
         margin: 0 0 13px 0
+        @media only screen and (max-width: 550px)
+            font-size: 18px
 
     &__content-col 
         font-family: 'Gilroy-Medium', sans-serif
         font-size: 16px;
         line-height: 155%;
-        color: #1c154ecc 
+        color: #1c154ecc
+        @media only screen and (max-width: 550px)
+            font-size: 14px
