@@ -1,7 +1,7 @@
 extends layout/main
 
 block variables
-	-var title = 'Главная страница'
+	-var title = 'Patent check of Your Amazon Future Product'
 
 block head
 	link(rel="stylesheet" type='text/css' href="static/css/home.css")
@@ -75,7 +75,7 @@ block content
 								img.info__pic-card(src="/static/images/content/card-2.png", alt="the image is missing")
 								.info__card-footer-2 
 									p.info__subtitle-card
-										|Active patent <br> High  risk to sell
+										|Expired patent <br> Totally safe to sell
 
 							.info__card
 								p.info__title-card
@@ -107,7 +107,7 @@ block content
 								.info__email
 									label.info__label(for="email")
 										|Enter your email address
-									input#email.info__field(type="email", name="email" placeholder="team@checkforpatent.com")
+									input#email.info__field(type="email", name="email" placeholder="team@checkforpatent.com" required)
 
 								.info__product-wrap
 									p.info__title-product
@@ -115,11 +115,11 @@ block content
 
 									label.info__label(for="keyword")
 										|Enter main keyword for the product
-									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup")  
+									input#keyword.info__field(type="text", name="keyword" placeholder="for example, sylicon wine cup" required)  
 
 									label.info__label(for="keyword")
 										|Enter link to the similar product as a reference
-									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")  
+									input#keyword.info__field(type="text", name="keyword" placeholder="https://..." required)  
 
 									button.info__add-product
 										span
@@ -131,7 +131,7 @@ block content
 
 								//- кнопка оплаты
 								.info__send-pay
-								button.info__submit-btn(type="submit")
+								button.info__submit-btn(type="submit" id="mainBtnState")
 									|Submit and Pay 
 									span(id="span")
 										|24.99 USD 
@@ -154,7 +154,7 @@ block content
 									//- .info__product.active-products - выбранный вариант
 									.info__product.active-products
 										.info__radio-field
-											input#product5.info__custom-radio(type="radio", name="product"  value="product-5" checked)
+											input#product5.info__custom-radio(type="radio", name="product"  value="16$" checked)
 											label(for="product5") 
 																
 										.info__text-product
@@ -165,7 +165,7 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product4.info__custom-radio(type="radio", name="product" value="product-4" )
+											input#product4.info__custom-radio(type="radio", name="product" value="18$" )
 											label(for="product4") 
 																
 										.info__text-product
@@ -177,7 +177,7 @@ block content
 					
 									.info__product
 										.info__radio-field
-											input#product3.info__custom-radio(type="radio", name="product" value="product-3" )
+											input#product3.info__custom-radio(type="radio", name="product" value="20$" )
 											label(for="product3") 
 																
 										.info__text-product
@@ -188,7 +188,7 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product2.info__custom-radio(type="radio", name="product" value="product-2" )
+											input#product2.info__custom-radio(type="radio", name="product" value="22$" )
 											label(for="product2") 
 																
 										.info__text-product
@@ -199,7 +199,7 @@ block content
 
 									.info__product
 										.info__radio-field
-											input#product1.info__custom-radio(type="radio", name="product" value="product-1" )
+											input#product1.info__custom-radio(type="radio", name="product" value="24.99$" )
 											label(for="product1") 
 																
 										.info__text-product
@@ -208,7 +208,7 @@ block content
 
 									//- кнопка оплаты
 								.info__send-pay
-										button.info__submit-btn(type="submit")
+										button.info__submit-btn(type="submit" id="secondBtnState")
 											|Continue
 
 							//- 3. Сами продукты
@@ -285,8 +285,18 @@ block content
 
 								//- кнопка оплаты
 								.info__send-pay
-										button.info__submit-btn(type="submit")
+										button.info__submit-btn(type="submit" id="lastBtnState")
 											|Continue
+
+								//- кнопка с лоадером 
+								.info__send-pay
+										button.info__loader-btn(type="submit" id="loaderBtn")
+											img(src="/static/images/content/btn-loader.svg", alt="loader")
+										.info__text-info
+											.info__secure-icon
+												+icon('secure')
+											p
+												|Secure payment with Stripe
 
 							//- 4. Удачная оплата
 							.info__payment-successful
@@ -295,6 +305,9 @@ block content
 								p.info__subtitle-form
 									|Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.			
 								img.info__succes-pic(src="/static/images/content/succes-pic.png", alt="the image is missing")
+								.info__send-pay
+										button.info__submit-btn(type="submit" id="lastBtnState")
+											|Back
 
 							//- 5. Ошибка оплаты
 							.info__payment-failed
@@ -302,12 +315,45 @@ block content
 									|Your payment failed
 								p.info__subtitle-form
 									|Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.		
-								img.info__succes-pic(src="/static/images/content/failed-pic.png", alt="the image is missing")
-
-							
-
+								img.info__failed-pic(src="/static/images/content/failed-pic.png", alt="the image is missing")
+								.info__send-pay
+										button.info__submit-btn(type="submit" id="lastBtnState")
+											|Try to pay again
 
 	section.process
+		.container
+			.process__wrap
+				h2.process__title
+					|The process we
+					span
+						|follow
+					.process__grid-wrap
+						.process__col
+							.process__dot
+							p.process__title-col
+								|Fill in the form
+							p.process__content-col
+								|Fill in the form and enter the <br> product names you want to  check <br> for patent existence
+						.process__col
+							.process__dot
+							p.process__title-col
+								|Research 
+							p.process__content-col
+								|We conduct a wide and detailed <br> patent search and analyze <br> similar patents 
+						.process__col
+							.process__dot
+							p.process__title-col
+								|Send result
+							p.process__content-col
+								|We will process your request <br> and send you a reply within <br> one working day
+						.process__col
+							.process__dot
+							p.process__title-col
+								|Answer questions
+							p.process__content-col
+								|If you have any questions about <br> our patent search, we will be <br> happy to answer them
+				
+	section.process.none
 		.container
 			.process__wrap
 				h2.process__title
@@ -342,8 +388,6 @@ block content
 								|If you have any questions about <br> our patent search, we will be <br> happy to answer them
 				.swiper-pagination
 								
-
-				
 	section.features
 		.container
 			.features__wrap
@@ -357,7 +401,7 @@ block content
 					p.features__title-col
 						|In-depth analysis <br> of your request
 					p.features__content-col 
-						|We conduct an extensive research in patent registries of the US and Europe. You will receive information if product patent exists or not, as well as a list of registered trademarks in this product category.
+						|We conduct an extensive search in patent registries of the US and Europe. You will receive information if product patent exists or not, as well as a list of registered trademarks in this product category.
 				.features__col
 					img.features__pic-col(src="/static/images/content/features-2.png", alt="the image is missing")
 					p.features__title-col
@@ -385,7 +429,7 @@ block content
 					p
 						span
 							|Make sure that your product is not patented
-						|and you do not use hidden trademarks in the description to avoid the unfortunate blocking of the product once it is on the market. Entrust this work to professionals to minimize your risks.
+						|and you do not use hidden trademarks in the description to avoid the unfortunate blocking of the product once it is on the market. Entrust online patent check to professionals to minimize your risks.
 				img.advantages__pic(src="/static/images/content/circle.png", alt="the image is missing")
 
 

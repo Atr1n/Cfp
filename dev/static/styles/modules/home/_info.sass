@@ -3,7 +3,7 @@
     @media only screen and (max-width: 1024px)
         margin: 80px 0 100px 0
     @media only screen and (max-width: 550px)
-        margin: 80px 0 60px 0
+        margin: 40px 0 60px 0
 
     &__wrap
         display: flex
@@ -81,7 +81,7 @@
             width: 100%
             padding: 10px
             background: #98A3D9
-            border-radius: 0px 25px 25px 0px
+            border-radius: 0px 0px 25px 25px
 
         &-footer-2
             position: absolute
@@ -89,7 +89,7 @@
             width: 100%
             padding: 10px
             background: #23C967
-            border-radius: 0px 25px 25px 0px
+            border-radius: 0px 0px 25px 25px
             
         img
             position: relative
@@ -103,8 +103,6 @@
         @media only screen and (max-width: 550px)
             margin-top: 1rem
             margin-left: 0
-        
-
 
     &__card:nth-child(2)
         img
@@ -245,6 +243,25 @@
         color: #FFFFFF
         @media only screen and (max-width: 320px)
             font-size: 14px
+
+    &__loader-btn
+        display: flex
+        justify-content: center
+        width: 100%
+        height: 50px
+        align-items: center
+        padding: 1rem 1.2rem
+        margin: 27px 0 25px 0
+        border: 0
+        background: #23C967;
+        border-radius: 15px;    
+        font-family: 'Gilroy-Bold', sans-serif; 
+        font-weight: bold   
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF
+        @media only screen and (max-width: 320px)
+            font-size: 14px
         
     &__text-info
         left: 0;
@@ -299,7 +316,6 @@
         display: inline-flex;
         align-items: center;
         user-select: none;
-  
     
 
     &__custom-radio+label::before 
@@ -315,7 +331,6 @@
         background-position: center center;
  
 
-
     &__custom-radio:checked+label::before 
         background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2323C967'/%3E%3C/svg%3E%0A");     
 
@@ -323,18 +338,24 @@
         font-family: 'Gilroy-Bold', sans-serif;
         font-size: 16px;
         line-height: 20px;  
-        margin: 0 0 11px 0       
+        margin: 0 0 11px 0
+        @media only screen and (max-width: 550px)
+            font-size: 13px;
+            line-height: 16px;
+            margin: 0 0 5px 0;      
    
     &__content-choose-product
         font-family: 'Gilroy-Medium', sans-serif;
         font-size: 13px;
         line-height: 19px;
         color: #A7A2CB;
+        @media only screen and (max-width: 550px)
+            font-size: 10px;
+            line-height: 12px;
   
     &__product.active-products
         .info__content-choose-product
             color: #23C967;
-
         
     &__product
         position: relative
@@ -378,15 +399,15 @@
 
     &__delete-prodect-btn
         position: absolute
-        top: 8px;
-        left: 120px;
+        top: 2px;
+        left: 85px;
         display: flex
         border: 0
         background: transparent
 
         svg
-            width: 20px
-            height: 20px
+            width: 13px
+            height: 13px
 
     &__product-card+&__product-card
         margin: 20px 0 0 0
@@ -422,7 +443,7 @@
 
     &__payment-successful
         display: none
-
+    
     //- Удачная оплата
 
     &__form-wrap.active-payment-successful
@@ -433,15 +454,24 @@
             display: none
 
     &__succes-pic
-        position: absolute;
-        top: 47.5%;
+        position: relative;
+        top: 50px;
+        width: 200px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         left: 0;
         right: 0;
-        margin: 0 auto;       
+        margin: 5rem auto;    
+        
+    &__failed-pic
+        width: 310px;
+        margin: 2.8rem auto;   
 
     &__payment-failed
         display: none
+        button 
+            background: #EA717F
 
     &__form-wrap.active-payment-failed
         .info__payment-failed
