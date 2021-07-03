@@ -46,6 +46,11 @@ block content
 
 				.info__col 
 					.info__present-content
+						.info__order-content
+							+icon('order')
+							.info__order-text
+								p
+									|ORDER
 						h1.info__title
 							|Patent
 							span
@@ -121,11 +126,10 @@ block content
 										|Enter link to the similar product as a reference
 									input#keyword.info__field(type="text", name="keyword" placeholder="https://..." required)  
 
-									button.info__add-product
-										span
-											|Add more products
-										+icon('plus')
-
+									.info__order-content
+											p.info__add-product
+												+icon('add')
+												|Add more products
 									p.info__offer-text
 										|We offer discount up to 36% for multiple checks
 
@@ -135,12 +139,20 @@ block content
 									|Submit and Pay 
 									span(id="span")
 										|24.99 USD 
+									.info__text-info
+										.info__secure-icon
+											+icon('plus-white')
+										p
+											|Secure payment with Stripe
+								
+								.info__last-text
+									p 
+										|Order will be processed within 
+										span
+											|1 day 
+										|and the <br> results will be mailed to you.
 
-								.info__text-info
-									.info__secure-icon
-										+icon('secure')
-									p
-										|Secure payment with Stripe 
+								
 
 							//- 2. Выбор количества продуктов
 							.info__add-products-wrap
@@ -160,7 +172,7 @@ block content
 										.info__text-product
 											p.info__title-choose-product
 												|5 products for 80 usd / 16$ for each
-											p.info__content-choose-product
+											p.info__content-choose-product(id="text1")
 												|You safe 36% on each patent check 
 
 									.info__product
@@ -171,7 +183,7 @@ block content
 										.info__text-product
 											p.info__title-choose-product
 												|4 products for 72 usd / 18$ for each
-											p.info__content-choose-product
+											p.info__content-choose-product(id="text")
 												|You safe 28% on each patent check  
 
 					
@@ -183,7 +195,7 @@ block content
 										.info__text-product
 											p.info__title-choose-product
 												|3 products for 60 usd / 20$ for each
-											p.info__content-choose-product
+											p.info__content-choose-product(id="text1")
 												|You safe 20% on each patent check  
 
 									.info__product
@@ -194,7 +206,7 @@ block content
 										.info__text-product
 											p.info__title-choose-product
 												|2 products for 44 usd / 22$ for each
-											p.info__content-choose-product
+											p.info__content-choose-product(id="text1")
 												|You safe 12% on each patent check 
 
 									.info__product
@@ -284,15 +296,15 @@ block content
 									input#keyword.info__field(type="text", name="keyword" placeholder="https://...")
 
 								//- кнопка оплаты
-								.info__send-pay
-										button.info__submit-btn(type="submit" id="lastBtnState")
-											|Continue
+								//- .info__send-pay
+								//- 		button.info__submit-btn(type="submit" id="lastBtnState")
+								//- 			|Continue
 
 								//- кнопка с лоадером 
 								.info__send-pay
 										button.info__loader-btn(type="submit" id="loaderBtn")
 											img(src="/static/images/content/btn-loader.svg", alt="loader")
-										.info__text-info
+										.info__secure-text
 											.info__secure-icon
 												+icon('secure')
 											p

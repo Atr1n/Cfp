@@ -8,9 +8,19 @@ const defaultBtnState = document.querySelector('.info__add-product')
 const secondBtnState = document.querySelector('#secondBtnState')
 
 // radioBtns
-const radioBtn = document.querySelectorAll('.info__custom-radio')
+const radioBtn = document.getElementsByName('product')
 const changeBtn = document.querySelector('#changeValue')
+const text = document.querySelectorAll('.info__content-choose-product')
 
+radioBtn.forEach(e => e.onchange = radioHanlder)
+
+function radioHanlder(e) {
+    if (e.target.checked) {
+        text.forEach(item => {
+            item.classList.add('active')
+        })
+    }
+}
 
 function redirectState() {
     defaultBtnState.addEventListener('click', e => {

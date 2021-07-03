@@ -1,7 +1,7 @@
 .info
-    margin: 80px 0 200px 0
+    margin: 65px 0 200px 0
     @media only screen and (max-width: 1024px)
-        margin: 80px 0 100px 0
+        margin: 65px 0 100px 0
     @media only screen and (max-width: 550px)
         margin: 40px 0 60px 0
 
@@ -37,16 +37,31 @@
             color: #23C967
             margin: 0 10px
 
+    &__order-content
+        display: flex
+        align-items: center
+        svg 
+            width: 13px
+            height: 13px
 
+    &__order-text
+        p
+            font-family: 'Gilroy-Bold', sans-serif 
+            font-size: 18px;
+            line-height: 21px;
+            color: #1C154E;
+            position: relative
+            padding-left: 5px
+            
     &__text
         font-family: 'Gilroy-Medium', sans-serif  
         font-size: 16px;
         line-height: 155%;      
         color: #1c154ecc 
-        margin: 24px 0 0 0
+        margin: 16px 0 0 0
 
     &__present-content+&__present-content
-        margin: 55px 0 0 0
+        margin: 24px 0 0 0
 
     &__subtitle
         font-family: 'Gilroy-SemiBold', sans-serif
@@ -135,12 +150,14 @@
 
     &__form
         width: 440px
+        height: 595px
         padding: 35px
         background: #FFFFFF;
         box-shadow: 10px 10px 60px #E2E7FF;
         border-radius: 0px 50px 50px 50px;
         @media only screen and (max-width: 768px)
-                width: 100%
+            width: 100%
+            height: 100%
         &-wrap
             @media only screen and (max-width: 768px)
                 padding-top: 2rem
@@ -192,46 +209,29 @@
 
     &__add-product
         position: relative
-        width: 100%
-        padding: 1rem 1.2rem
-        margin: 25px 0 15px 0
-        border: 0
-        border: 2px solid #23C967;
-        font-size: 16px;
-        line-height: 19px; 
-        border-radius: 15px;
-        background: transparent
-        font-family: 'Gilroy-Medium', sans-serif;
-        text-align: left
-        color: #23C967;
-        @media only screen and (max-width: 320px)
-            font-size: 14px
+        padding: 25px 0 15px 0
+        cursor: pointer
+        font-family: 'Gilroy-SemiBold', sans-serif 
+        font-size: 18px;
+        line-height: 21px;
+        color: #23C967
 
         svg
             position: absolute
-            top: 10px;
-            right: 20px
+            top: 20px
+            right: -22px
             width: 16px;
             height: 33px;
-
-        &::before
-            content: ''
-            position: absolute
-            height: 51px
-            width: 2px
-            background: #23C967;
-            right: 53px
-            top: 0
 
     &__offer-text
         font-family: 'Gilroy-Medium', sans-serif;
         font-size: 16px;
         line-height: 19px; 
-        color: #23C967;
+        color: #494471;
 
     &__submit-btn
         width: 100%
-        padding: 1rem 1.2rem
+        height: 60px
         margin: 27px 0 25px 0
         border: 0
         background: #23C967;
@@ -241,6 +241,8 @@
         font-size: 18px;
         line-height: 22px;
         color: #FFFFFF
+        @media only screen and (max-width: 550px)
+            font-size: 15px
         @media only screen and (max-width: 320px)
             font-size: 14px
 
@@ -263,6 +265,35 @@
         @media only screen and (max-width: 320px)
             font-size: 14px
         
+    &__last-text
+        display: flex
+        justify-content: center
+        p
+            font-family: 'Gilroy-Regular', sans-serif; 
+            font-size: 14px
+            line-height: 19px
+            text-align: center
+            color: #AFB4CC
+            span 
+                color: #23C967
+                font-weight: 500
+                
+    &__secure-text
+        display: flex
+        justify-content: center
+        p
+            font-family: 'Gilroy-Regular', sans-serif; 
+            font-size: 14px
+            line-height: 19px
+            text-align: center
+            color: #A7A2CB
+        
+        svg 
+            position: relative
+            top: 3px
+            right: 3px
+
+        
     &__text-info
         left: 0;
         right: 0;
@@ -271,10 +302,15 @@
         justify-content: center;
 
         p
-            font-family: 'Gilroy-Medium', sans-serif;
-            font-size: 16px;
-            line-height: 19px;
-            color: #A7A2CB;
+            padding-top: 3px
+            font-family: 'Gilroy-Regular', sans-serif;
+            font-weight: 400
+            font-size: 14px;
+            line-height: 17px;
+            color: #fff;
+            @media only screen and (max-width: 550px)
+                padding-top: 0
+                font-size: 13px
 
     &__secure-icon
         display: flex
@@ -283,6 +319,7 @@
             width: 10px
             height: 12px
             margin: 0 5px 0 0
+            fill: #fff
 
             
     &__send-pay
@@ -399,7 +436,7 @@
 
     &__delete-prodect-btn
         position: absolute
-        top: 2px;
+        top: 5px;
         left: 85px;
         display: flex
         border: 0
